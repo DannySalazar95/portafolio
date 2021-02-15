@@ -1,0 +1,51 @@
+@import "src/variables";
+
+.experience-section {
+  margin: 330px 0 164px;
+  position: relative;
+  @apply bg-gray-900 md:py-8 md:px-64;
+
+  .experience-section__title {
+    @apply md:text-5xl text-3xl font-bold text-white mb-10 mx-4;
+  }
+
+  .experience-section__body {
+    @apply grid gap-4 grid-cols-1 mx-4;
+  }
+}
+.experience-section::before, .experience-section::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-size: 100% !important;
+  -webkit-mask-size: 100% !important;
+  @apply bg-gray-900;
+}
+.experience-section::before {
+  -webkit-mask: url($wave_before) center top;
+  height: 330px;
+  bottom: 100%;
+};
+.experience-section::after {
+  -webkit-mask: url($wave_after) center top;
+  height: 164px;
+  top: 100%;
+}
+.work {
+  @apply box-content text-white z-10 mb-12;
+
+  .work__dates {
+    @apply text-center mb-4;
+  }
+
+  .work__body {
+    @apply grid gap-4 md:grid-cols-2 grid-cols-1 bg-gray-800 p-4 rounded-xl;
+  }
+}
+@media screen and (max-width: 768px) {
+  .experience-section::before, .experience-section::after {
+    height: 100px;
+  }
+}

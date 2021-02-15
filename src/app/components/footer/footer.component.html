@@ -1,0 +1,27 @@
+<div class="footer-section">
+    <div class="footer-section__body">
+        <div class="footer-col">
+            <p class="footer-col__title">
+                <span>PERFILES</span>
+            </p>
+            <p *ngFor="let profile of profilesLinks">
+                <a [href]="profile.href" class="cursor-pointer" target="_blank">{{ profile.text }}</a>
+            </p>
+        </div>
+        <div class="footer-col">
+            <p class="footer-col__title">
+                <span>MEDIOS DE CONTACTO</span>
+            </p>
+            <p *ngFor="let contact of contacts" class="text-white">{{ contact.value }}</p>
+        </div>
+        <div class="footer-col">
+            <p class="footer-col__title">
+                <span>PREGUNTAS CORTAS</span>
+            </p>
+            <p *ngFor="let question of questions" class="text-white">{{ question.value }}</p>
+        </div>
+    </div>
+    <div class="footer-section__footer">
+        © 2019 Danny Salazar.Todos los derechos reservados
+    </div>
+</div>

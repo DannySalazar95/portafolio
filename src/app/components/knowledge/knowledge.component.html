@@ -1,0 +1,29 @@
+<section class="knowledge-section" id="knowledge">
+    <h1 class="knowledge-section__title">
+        CONOCIMIENTOS
+    </h1>
+    <div class="knowledge-section__body">
+        <div *ngFor="let k of knowledgeBackend" class="knowledge">
+            <span class="knowledge__level">
+                {{ k.level }}
+            </span>
+            <div class="knowledge__image">
+                <img [src]="k.icon" alt="icon" width="100" class="mx-auto">
+            </div>
+            <div>
+                <p *ngFor="let d of k.description">{{ d }}</p>
+            </div>
+        </div>
+        <div *ngFor="let k of knowledgeFrontend" class="knowledge">
+            <span class="knowledge__level">
+                {{ k.level }}
+            </span>
+            <div class="knowledge__image">
+                <img [src]="k.icon" alt="icon" width="100" class="mx-auto">
+            </div>
+            <div>
+                <p *ngFor="let d of k.description">{{ d }}</p>
+            </div>
+        </div>
+    </div>
+</section>
